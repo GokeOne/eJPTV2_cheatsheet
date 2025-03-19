@@ -80,6 +80,7 @@ En la máquina atacante abrimos la escucha en el puerto 448 con nc.
 ![image](https://github.com/user-attachments/assets/b58ae2fb-b890-4d33-84a1-6668ebaf51be)
 
 Hacemos un revershell en la máquina victima 2.
+
 ![image](https://github.com/user-attachments/assets/8244188f-b6d2-424d-a27f-d96d7b652d37)
 
 Y en la escucha que tenemos en el puerto 448 se nos abrirá la shell de la máquina 2.
