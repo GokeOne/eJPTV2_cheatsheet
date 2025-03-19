@@ -69,6 +69,7 @@ Añadimos está linea al final del todo del archivo /etc/proxychains4
 ![image](https://github.com/user-attachments/assets/aad2e1f7-1ca9-461d-adf2-b2880a9a1816)
 
 Añadimos el proxy y ya podremos ver la página de la segunda máquina de la red. Pero para que estas máquinas puedan conectarse a nosotros necesitamos el socat.
+
 ![image](https://github.com/user-attachments/assets/9c40aac3-b8b3-4b3e-9218-4629868a6466)
 
 Abrimos en la máquina victima 1 un escucha en el puerto 1111, y que lo reenvie a nuestra máquina atacante al puerto 448.
