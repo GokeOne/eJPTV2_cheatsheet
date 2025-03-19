@@ -113,8 +113,11 @@ Con esta herramienta podemos hacer ataques de fuerza bruta a hashes de contraseÃ
 
 Practica de ejemplo:
 `unshadow /etc/passwd /etc/shadow > password.txt`
+
 `john --wordlist=/path/to/dictionary password.txt`
+
 `john --wordlist=/home/kali/contraas.txt  hash.txt --format=crypt ` "--format=crypt(sirve para yescrypt que es el hash de la pass de linux)"
+
 `john --show password.txt`
 
 
