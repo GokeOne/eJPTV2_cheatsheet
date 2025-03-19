@@ -35,38 +35,49 @@ proc.terminate()
 
 # Realizar explotación con metasploit
 
-![[Pasted image 20240726092624.png]]
+![image](https://github.com/user-attachments/assets/99bc01b1-9d9e-4c20-abf0-b6862b05e4b0)
+
 Después de hacer un nmap y haber visto las versiones de los servicios, podemos buscar a ver si hay exploits con searchsploit.
-![[Pasted image 20240726092756.png]]
+![image](https://github.com/user-attachments/assets/5d5254ed-46a3-44ae-893c-106d6b8d6da2)
+
 También podemos hacer la búsqueda desde la msfconsole.
-![[Pasted image 20240726092848.png]]
+![image](https://github.com/user-attachments/assets/0e842828-5115-40c3-9419-2ac7de8b8b87)
+
 Podemos buscar haber si hay algun exploit disponible  con search 
 Podemos seleccionar el eploit con use 0, sino podemos hacer un use exploit/unix/ftp/vsftpd_234_backdoor
-![[Pasted image 20240726093136.png]]
+![image](https://github.com/user-attachments/assets/e9a88f42-07c3-4743-aeb5-791075080c02)
+
 Con show options, podemos ver los parametros que necesita el exploit.
-![[Pasted image 20240726093322.png]]
+![image](https://github.com/user-attachments/assets/15394aee-2def-4658-809e-41a57796fad5)
+
 Con set marcamos el rhosts y le ponemos la ip de la máquina victima.
 Hacemos el primer exploit y vemos que no ha conseguido crear la session, pero hacemos run y ya coge la shell como root.
 
 # Demostrar cómo pivotar agregando una ruta y reenviando puertos
-![[Pasted image 20240726094537.png]]
+![image](https://github.com/user-attachments/assets/a2466c9e-7e63-4828-83b7-ce971ad4acd7)
+
 Creamos un servidor  con chisel para crear un tunel http entre la máquina victima y la mía.
-![[Pasted image 20240726094612.png]]
+![image](https://github.com/user-attachments/assets/17eac6bd-afe0-433f-9a95-a48b915f8601)
+
 Nos conectamos como cliente desde la máquina victima a la máquina atacante.
-![[Pasted image 20240726094710.png]]
+![image](https://github.com/user-attachments/assets/12952c36-afad-4e1d-886f-74c943f342fc)
+
 Podemos ver que se nos han conectado por el puerto 6565 y que se ha generado un proxy en el puerto 1080.
-![[Pasted image 20240726094753.png]]
+![image](https://github.com/user-attachments/assets/53006bbe-e569-4f5b-af83-bca58fe63769)
+
 Añadimos está linea al final del todo del archivo /etc/proxychains4
-![[Pasted image 20240726095115.png]]
+![image](https://github.com/user-attachments/assets/aad2e1f7-1ca9-461d-adf2-b2880a9a1816)
+
 Añadimos el proxy y ya podremos ver la página de la segunda máquina de la red. Pero para que estas máquinas puedan conectarse a nosotros necesitamos el socat.
-![[Pasted image 20240726102443.png]]
+![image](https://github.com/user-attachments/assets/9c40aac3-b8b3-4b3e-9218-4629868a6466)
+
 Abrimos en la máquina victima 1 un escucha en el puerto 1111, y que lo reenvie a nuestra máquina atacante al puerto 448.
 
-![[Pasted image 20240726102525.png]]
+![image](https://github.com/user-attachments/assets/bfcc8164-0c59-4692-b32f-0c3d3b5bc27a)
 En la máquina atacante abrimos la escucha en el puerto 448 con nc.
-![[Pasted image 20240726112713.png]]
+![image](https://github.com/user-attachments/assets/b58ae2fb-b890-4d33-84a1-6668ebaf51be)
 Hacemos un revershell en la máquina victima 2.
-![[Pasted image 20240726112739.png]]
+![image](https://github.com/user-attachments/assets/8244188f-b6d2-424d-a27f-d96d7b652d37)
 Y en la escucha que tenemos en el puerto 448 se nos abrirá la shell de la máquina 2.
 
 
@@ -75,7 +86,7 @@ Y en la escucha que tenemos en el puerto 448 se nos abrirá la shell de la máqu
 
 # Realizar ataques de fuerza bruta a contraseñas y descifrado de hash
 
-![[Pasted image 20240726123145.png]]
+![image](https://github.com/user-attachments/assets/40123c1d-985d-45e8-9f8d-92ab442b1cab)
 Para hacer ataques de fuerza bruta a contraseñas, podemos utilizar hydra:
 -L marca el diccionario de usernames que se probarán
 -p marca el diccionario de passwords que utilizará
