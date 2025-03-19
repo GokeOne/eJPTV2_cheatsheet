@@ -75,10 +75,13 @@ Añadimos el proxy y ya podremos ver la página de la segunda máquina de la red
 Abrimos en la máquina victima 1 un escucha en el puerto 1111, y que lo reenvie a nuestra máquina atacante al puerto 448.
 
 ![image](https://github.com/user-attachments/assets/bfcc8164-0c59-4692-b32f-0c3d3b5bc27a)
+
 En la máquina atacante abrimos la escucha en el puerto 448 con nc.
 ![image](https://github.com/user-attachments/assets/b58ae2fb-b890-4d33-84a1-6668ebaf51be)
+
 Hacemos un revershell en la máquina victima 2.
 ![image](https://github.com/user-attachments/assets/8244188f-b6d2-424d-a27f-d96d7b652d37)
+
 Y en la escucha que tenemos en el puerto 448 se nos abrirá la shell de la máquina 2.
 
 
