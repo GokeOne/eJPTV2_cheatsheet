@@ -28,7 +28,9 @@ Gobuster y ffuf son herramientas muy buenas para este problema.
 # Realizar un ataque de inicio de sesión por fuerza bruta
 
 Con hydra podemos realizar ataques de fuerza bruta en formularios de inicio de sesión.
+
 `hydra -l admin -P /path/to/passwordlist.txt http-post-form "/login:username=^USER^&password=^PASS^:F=incorrecto" -V`
+
 	· hydra: Programa para realizar ataques de fuerza bruta
 	· -l admin: especifica el nombre de usuario. Se podría usar un -L /directorio/del/wordlist.txt
 	· -P /directorio/del/wordlist.txt Indica el diccionario para las contraseñas.
