@@ -136,5 +136,6 @@ Con -m especificamos el tipo de hash (MD5 en este caso)
 -a especifica el modo de ataque (ataque de diccionario)
 Primero se pone el archivo donde tenemos el hash a crackear y luego ponemos el diccionario 
 
-![[Pasted image 20240726123331.png]]
+![image](https://github.com/user-attachments/assets/3daaf128-cf9c-4f48-83ba-b08ff6b79b92)
+
 Para saber el tipo de hash que es, podemos utilizar la herramienta de hash-identifier
